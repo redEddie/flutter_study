@@ -128,17 +128,15 @@ class MyAppState extends State<MyApp> {
                         children: [
                             DropdownButton(
                                 value: _startMeasure,
-                                items: _measures
-                                    .map((String value) {
+                                items: _measures.map((String value) {
                                     return DropdownMenuItem<String>(
                                         value: value,
                                         child: Text(value),
                                     );
-                                })
-                                    .toList(),
+                                }).toList(),
                                 onChanged: (value) {
                                     setState(() {
-                                      _startMeasure = value;
+                                        _startMeasure = value;
                                     });
                                 },
                             ),
